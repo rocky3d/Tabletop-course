@@ -1,0 +1,173 @@
+body
+{
+        overflow:hidden;
+    	margin:0;  
+    	background-color:#f0f0f0;
+	font-family:calibri,tahoma,verdana,arial,hevetica,sans-serif;
+	 
+}
+#wrapper {
+    top:0;
+    width:1000px;
+    height:594px;
+   /* padding-bottom:0px;*/
+    position:fixed;
+    /*margin:auto;*/
+    /*box-shadow:#333 5px 5px 10px;*/
+    /*background-color:#fff;*/
+    overflow:hidden;
+    background-image: url('../images/background_image.jpg');
+    /*background-image:url('base_background.jpg'); */
+ }
+.hide {
+    display:none;
+ }
+#container object 
+{
+    
+	 display:block;
+    width:1000px;
+    height:470px;
+	position:fixed;
+	top:64px;
+    /*padding-bottom:0px;*/
+   /* padding-top:63px;*/
+    
+
+ }
+
+#back,#next {
+    cursor:pointer;
+ }
+#text
+{
+  position:absolute;
+   left:540px;
+   top:545px;
+}
+#back
+{
+  position:absolute;
+   left:795px;
+   top:533px;
+}
+#next {
+
+   
+   position:absolute;
+   left:940px;
+   top:533px;
+ }
+#exit 
+{
+   position:absolute;
+   left:15px;
+   top:533px;
+
+}
+#help
+{
+	  position:absolute;
+   left:85px;
+   top:533px;
+  
+  
+}
+#glossary
+{
+	position:absolute;
+   left:235px;
+   top:533px;
+}
+#print
+{
+	position:absolute;
+   left:160px;
+   top:533px;
+}
+#references
+{
+	position:absolute;
+   left:300px;
+   top:533px;
+}
+
+#coursetitle
+{
+	position:relative;
+	font-size:17pt;
+	left:235px;
+	top:0px;
+	z-index:9999;
+	font-weight:bold;
+	font-family:calibri;
+    /*text-align:center;*/
+ }
+
+#pagetitle
+{
+    position:relative;
+    /*width:600px;*/
+    /*margin:auto;*/
+    font-size:12pt;
+    color: #ffffff;/*333333*/
+    left:240px;
+    top:-4px;
+    z-index:9999;
+	font-weight:bold;
+    font-family:calibri;
+	width:400px;
+    
+}
+
+#goto
+{
+	 position: absolute;
+	 top:533px;
+	 left:870px;
+}
+
+/*#Page_List
+{
+	  position: absolute;
+	  top:555px;
+	  left:865px; 
+}*/
+#pageNum
+{
+   /*position:relative;
+*/
+	position: absolute;
+   left:490px;
+  
+   top:569px;
+   z-index:9999;
+   width:80px;
+}  
+#completed
+{   
+   position: absolute;
+   left:470px;
+   top:555px;
+   z-index:9999;
+   width:105px;
+   font-size: 13px;
+
+}
+
+#quizLink
+{
+	position:relative;
+	cursor:pointer;
+	color:#ffffff;
+	text-decoration:underline;
+   font-family:Comic Sans;
+   left:490px;
+   top:-200px;
+   z-index:9999;
+   width:600px;
+   /*text-shadow: 0.1em 0.1em 0.2em black;
+   text-shadow: -1px 0 black, 0 1px black,1px 0 black, 0 -1px black;
+   filter: glow(color=black, strength=1) 
+   /*filter: progid:DXImageTransform.Microsoft.Shadow(color=#000000,direction=120,Strength=1);*/
+}

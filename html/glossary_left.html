@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Glossary</title>
+<link rel=stylesheet type="text/css" href="../html/glossary.css">
+<script language="javascript" type="text/JavaScript">
+
+/*******************************************************
+Name: ShowDef		Date: 1/2/06   Author: Chris Roberts
+Description: Matches glossary term and displays it in the right glossary pane.
+Parameters: term - the glossary term.
+Notes: 1) Section of regarding displaying the term in the left pane isn't working. (see below)
+       2) All terms in the case statement must be in lower case.
+*******************************************************/
+function showDef(term){
+	var def = ""
+	if (term) 
+		var tmpTerm = term.toLowerCase();
+	else { 
+		tmpTerm = "";
+		term = "";
+	}
+	var rDoc = parent.glossaryRightFrame.document.open()
+	switch (tmpTerm) {
+		//A
+		case 'advon':
+			def = "Advance Echelon";
+			break;
+			
+		case 'afsc':
+			def = "Air Force Specialty Code";
+			break;	
+			
+		//B
+
+		
+		//C
+		case 'cbirf':
+			def = "Chemical-Biological Incident Response Force";
+			break;
+			
+		case 'cbrn':
+			def = "Chemical, Biological, Radiological, Nuclear";
+			break;
+			
+		case 'cbrne':
+			def = "Chemical, Biological, Radiological, Nuclear and High-Yield Explosives";
+			break;
+			
+		case 'ccir':
+			def = "Commander's Critical Information Requirements";
+			break;	
+						
+		case 'cold zone':
+			def = "This zone is also referred to as the clean zone or support zone. The cold zone contains the command post and other such support functions as are deemed necessary to control the incident.";
+			break;
+			
+		case 'cst':
+			def = "Civil Support Team";
+			break;
+		
+		//D
+		case 'dce':
+			def = "Defense Coordinating Element";
+			break;
+        case 'dco':
+			def = "Defense Coordinating Officer";
+			break;
+		case 'dsca':
+			def = "Defense Support to Civil Authorities";
+			break;
+
+		//E
+		case 'emac':
+			def = "Emergency Management Assistance Compact";
+			break;
+		case 'esf':
+			def = "Emergency Support Function";
+			break;
+		case 'exeval':
+			def = "External Evaluation";
+			break;
+					
+		
+		//F
+		case 'fsrt':
+			def = "Fatalities Search and Recovery Team";
+			break;
+		
+		//G
+	
+			
+		//H
+		case 'hot zone':
+			def = "The area immediately surrounding a hazardous materials incident.";
+			break;
+		
+		//I
+		case 'ics':
+			def = "Incident Command System";
+			break;
+		
+		//J
+		case 'jfhq':
+			def = "Joint Forces Headquarters";
+			break;
+		case 'jfo':
+			def = "Joint Field Office";
+			break;
+		case 'jitec':
+			def = "Joint Interagency Training and Education Center";
+			break;		
+		case 'joc':
+			def = "Joint Operations Center";
+			break;
+		
+		//K
+		
+		//L
+		case 'lno':
+			def = "Liason Officer";
+			break;
+		
+		//M
+		case 'mos':
+			def = "Military Occupational Speciality";
+			break;
+			
+		//N
+		case 'nims':
+			def = "National Incident Management System";
+			break;
+		
+		case 'nrf':
+			def = "National Response Framework";
+			break;
+		
+		//O
+		case 'osha':
+			def = "Occupational Safety and Health Administration";
+			break;
+		
+		//P
+		case 'papr':
+			def = "Powered Air-Purifying Respirator";
+			break;
+		case 'ppe':
+			def = "Personal Protective Equipment";
+			break;
+			
+		//Q
+		
+		//R
+		case 'rfa':
+			def = "Request For Assistance";
+			break;
+		
+		//S		
+			
+		case 'sad':
+			def = "State Active Duty";
+			break;
+		
+		case 'sco':
+			def = "State Coordinating Officer";
+			break;
+
+		//T
+		case 'tag':
+			def = "The Adjutant General (NG)";
+			break;
+		
+		//U		
+			
+		//V
+		
+		//W
+		case 'warm zone':
+			def = "The area of a hazardous material incident where personnel and equipment decontamination and hot zone support takes place.";
+			break;
+		
+		//X		
+		
+		//Y
+		
+		//Z
+		
+		
+		
+		
+		default:
+			def = "";
+	}
+	rDoc.write("<link rel=stylesheet type='text/css' href='glossary.css'><br>");
+	rDoc.write("<p class='defTerm'>" + term  + "</p><br><p class='def'>" + def + "</p>");
+	rDoc.close
+	
+	/*
+	for (var i = 0; i < document.anchors.length; i++) {
+		if (document.anchors[i].id == term) {	
+			this.document.location = document.anchors[i]
+		}
+	}
+	*/     //ToDo...NOT WORKING.  Fix this so that the word is displayed in the left pane.
+}
+
+/******************************************************
+Name: goToLetter	Date: 1/2/06  Author: Chris Roberts
+Description: Called from the top glossary frame when user clicks a letter to move left pane
+to appropriate letter.
+Parameters: letter - the letter the user clicked on.
+Notes: Section of regarding displaying the term in the left pane isn't working. (see below)
+*******************************************************/
+function goToLetter(letter) {	
+	for (var i = 0; i < document.anchors.length; i++) {
+		if (document.anchors[i].id == letter) {	
+			this.document.location = document.anchors[i]
+		}
+	}
+}
+
+</script>
+
+<style type="text/css">
+<!--
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: #000000;
+}
+a:hover {
+	color: #000000;
+}
+a:active {
+	color: #000000;
+}
+body {
+	background-image: url();
+	background-repeat: no-repeat;
+	background-color: #999999;
+}
+-->
+</style></head>
+
+<body>
+<!-- THE GLOSSARY TERM SECTION -->
+<p class="style2"><a name="A" id="A" href="#A">- A -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "ADVON">ADVON</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "AFSC">AFSC</a></p>
+
+<p class="style2"><a name="B" id="B" href="#B">- B -</a></p>
+
+<p class="style2"><a name="C" id="C" href="#C">- C -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "CBIRF">CBIRF</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "CBRN">CBRN</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "CBRNE">CBRNE</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "CCIR">CCIR</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "Cold Zone">Cold Zone</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "CST">CST</a></p>
+<p class="style2"><a name="D" id="D" href="#D">- D -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "DCE">DCE</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "DCO">DCO</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "DSCA">DSCA</a></p>
+
+<p class="style2"><a name="E" id="E" href="#E">- E -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "EMAC">EMAC</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "ESF">ESF</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "EXEVAL">EXEVAL</a></p>
+
+<p class="style2"><a name="F" id="F" href="#F">- F -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "FSRT">FSRT</a></p>
+
+<p class="style2"><a name="G" id="G" href="#G">- G -</a></p>
+
+<p class="style2"><a name="H" id="H" href="#H">- H -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "Hot Zone">Hot Zone</a></p>
+
+<p class="style2"><a name="I"  id="I" href="#I">- I -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "ICS">ICS</a></p>
+
+<p class="style2"><a name="J"  id="J" href="#J">- J -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "JFHQ">JFHQ</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "JFO">JFO</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "JITEC">JITEC</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "JOC">JOC</a></p>
+
+<p class="style2"><a name="K"  id="K" href="#K">- K -</a></p>
+
+<p class="style2"><a name="L" id="L" href="#L">- L -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "LNO>LNO</a></p>
+
+<p class="style2"><a name="M" id="M" href="#M">- M -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "MOS">MOS</a></p>
+
+<p class="style2"><a name="N" id="N" href="#N">- N -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "NIMS">NRF</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "NRF">NRF</a></p>
+
+<p class="style2"><a name="O" id="O" href="#O">- O -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "OSHA">OSHA</a></p>
+
+<p class="style2"><a name="P" id="P" href="#P">- P -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "PAPR">PAPR</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "PPE">PPE</a></p>
+
+<p class="style2"><a name="Q" id="Q" href="#Q">- Q -</a></p>
+
+<p class="style2"><a name="R" id="R" href="#R">- R -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "RFA">RFA</a></p>
+
+<p class="style2"><a name="S" id="S" href="#S">- S -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "SAD">SAD</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "SCO">SCO</a></p>
+
+<p class="style2"><a name="T" id="T" href="#T">- T -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "TAG">TAG</a></p>
+
+<p class="style2"><a name="U" id="U" href="#U">- U -</a></p>
+
+<p class="style2"><a name="V" id="V" href="#V">- V -</a></p>
+
+<p class="style2"><a name="W" id="W" href="#W">- W -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "Warm Zone">Warm Zone</a></p>
+
+<p class="style2"><a name="X" id="X" href="#X">- X -</a></p>
+
+<p class="style2"><a name="Y" id="Y" href="#Y">- Y -</a></p>
+<p class="term"><a href="javascript:" onclick="showDef(this.id)" id = "Yeast">Yeast</a></p>
+
+<p class="style2"><a name="Z" id="Z" href="#Z">- Z -</a></p>
+
+</body>
+</html>

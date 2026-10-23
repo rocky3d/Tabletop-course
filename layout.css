@@ -1,0 +1,63 @@
+.layer1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+}
+.layer_table {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+	
+.subtitle {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+.popup {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	border: solid;
+	position: absolute;
+	visibility: hidden;
+	z-index: 10;
+	margin: 0px;
+	padding: 7px;
+	color: #000000;
+	background-color: #333333;
+	cursor: hand;
+}
+
+.popupHelp{
+	position:absolute;
+	top:449px;
+	left:722px;
+	font-family:Arial, Helvetica, sans-serif;
+	font:Arial, sans-serif;
+	font-size:13px;
+	background-color: #FFFFCC;
+	border-top-style:ridge;
+	border-top-color:#000000;
+	border-top-width:1px;
+	border-left-style:ridge;
+	border-left-color:#000000;
+	border-left-width:1px;
+	border-right-style:ridge;
+	border-right-color:#000000;
+	border-right-width:1px;
+	border-bottom-style:ridge;
+	border-bottom-color:#000000;
+	border-bottom-width:1px;
+	padding-left:7px;
+	padding-top:7px;
+	padding-bottom:8px;
+	padding-right:8px;
+	margin-left:2px;
+	margin-right:10px;
+	margin-top:2px;
+	margin-bottom:2px;
+	visibility:hidden;
+	cursor:pointer;
+	z-index:200;
+	}
